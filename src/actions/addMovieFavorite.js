@@ -1,4 +1,4 @@
-import { ADD_MOVIE_FAVORITE } from ".";
+import { ADD_MOVIE_FAVORITE } from '.';
 
 export default function addMovieFavorite(payload) {
   return {

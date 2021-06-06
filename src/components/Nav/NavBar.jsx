@@ -1,7 +1,7 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
+import React from 'react';
+import { NavLink } from 'react-router-dom';
 
-import "./NavBar.component.css";
+import './NavBar.component.css';
 
 export default function NavBar() {
   return (

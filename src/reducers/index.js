@@ -3,12 +3,12 @@ import {
   GET_MOVIE_DETAIL,
   GET_MOVIES,
   REMOVE_MOVIE_FAVORITE,
-} from "../actions";
+} from '../actions';
 
 const initialState = {
   favoriteMovies: [],
   loadMovies: [],
-  movieDetail: "",
+  movieDetail: '',
 };
 
 const rootReducer = (state = initialState, action) => {
@@ -34,9 +34,7 @@ const rootReducer = (state = initialState, action) => {
     case REMOVE_MOVIE_FAVORITE: {
       return {
         ...state,
-        favoriteMovies: state.favoriteMovies.filter(
-          (movie) => movie.id !== action.payload
-        ),
+        favoriteMovies: state.favoriteMovies.filter((movie) => movie.id !== action.payload),
       };
     }
     default:

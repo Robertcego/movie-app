@@ -1,5 +1,5 @@
-import React from "react";
-import "./MovieCard.component.css";
+import React from 'react';
+import './MovieCard.component.css';
 
 function MovieCard({ title, poster }) {
   return (

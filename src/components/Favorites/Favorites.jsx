@@ -1,7 +1,7 @@
-import React from "react";
-import { connect } from "react-redux";
-import { removeMovieFavorite } from "../../actions";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { connect } from 'react-redux';
+import { removeMovieFavorite } from '../../actions';
+import { Link } from 'react-router-dom';
 
 function Favorites({ favorites, removeMovieFavorite }) {
   return (

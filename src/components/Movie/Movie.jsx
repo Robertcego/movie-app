@@ -1,7 +1,7 @@
-import React, { useEffect } from "react";
-import { connect } from "react-redux";
-import { getMovieDetail } from "../../actions/index";
-import { useParams } from "react-router-dom";
+import React, { useEffect } from 'react';
+import { connect } from 'react-redux';
+import { getMovieDetail } from '../../actions/index';
+import { useParams } from 'react-router-dom';
 
 function Movie({ getMovieDetail, movieDetail }) {
   const { id } = useParams();
@@ -18,6 +18,11 @@ function Movie({ getMovieDetail, movieDetail }) {
           <p>{movieDetail.Title}</p>
           <p>{movieDetail.Year}</p>
           <img src={movieDetail.Poster} alt="" />
+          <p>{movieDetail.Rated}</p>
+          <p>{movieDetail.Released}</p>
+          <p>{movieDetail.Runtime}</p>
+          <p>{movieDetail.Director}</p>
+          <p>{movieDetail.Plot}</p>
         </div>
       ) : (
         <p>Loading...</p>

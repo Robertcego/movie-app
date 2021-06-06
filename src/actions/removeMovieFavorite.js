@@ -1,4 +1,4 @@
-import { REMOVE_MOVIE_FAVORITE } from ".";
+import { REMOVE_MOVIE_FAVORITE } from '.';
 
 export default function removeMovieFavorite(payload) {
   return {

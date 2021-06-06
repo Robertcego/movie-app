@@ -1,9 +1,9 @@
-import React from "react";
-import Favorites from "./components/Favorites/Favorites";
-import Search from "./components/Search/Search";
-import NavBar from "./components/Nav/NavBar";
-import { Route } from "react-router-dom";
-import Movie from "./components/Movie/Movie";
+import React from 'react';
+import Favorites from './components/Favorites/Favorites';
+import Search from './components/Search/Search';
+import NavBar from './components/Nav/NavBar';
+import { Route } from 'react-router-dom';
+import Movie from './components/Movie/Movie';
 
 function App() {
   return (
