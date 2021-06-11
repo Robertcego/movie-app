@@ -8,7 +8,7 @@ function Movie({ getMovieDetail, movieDetail }) {
 
   useEffect(() => {
     getMovieDetail(id);
-  }, [getMovieDetail, movieDetail, id]);
+  }, [getMovieDetail, id]);
 
   return (
     <div>

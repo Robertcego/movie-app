@@ -1,23 +1,14 @@
 nav {
   height: 3.5rem;
+  width: 100vw;
   background-color: #3d3d3d;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
 }
 
 a {
   color: #fafafa;
   text-decoration: none;
-}
-
-.menu-item:hover {
-  transform: scale(1.05);
-}
-
-.menu-container {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-}
-
-.menu-item {
-  padding: 1rem;
 }

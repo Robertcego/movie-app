@@ -1,22 +1,15 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-
+import Search from '../Search/Search';
 import './NavBar.component.css';
 
 export default function NavBar() {
   return (
     <header>
       <nav>
-        <div className="menu-container">
-          <div className="menu-item">
-            <NavLink exact to="/">
-              Home
-            </NavLink>
-          </div>
-          <div className="menu-item">
-            <NavLink to="/favorites">Favorites</NavLink>
-          </div>
-        </div>
+        <Search />
+        <NavLink exact to="/">Home</NavLink>
+        <NavLink to="/favorites">Favorites</NavLink>
       </nav>
     </header>
   );
