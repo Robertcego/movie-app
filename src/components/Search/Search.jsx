@@ -4,7 +4,7 @@ import { addMovieFavorite, getMovies } from '../../actions';
 // import { Link } from 'react-router-dom';
 // import MovieCard from '../Movie/MovieCard';
 
-function Search({ movies, getMovies, addMovieFavorite }) {
+function Search({ movies, getMovies }) {
   const [title, setTitle] = useState('');
 
   const handleChange = (e) => {
@@ -34,7 +34,7 @@ const mapStateToProps = (state) => ({
 const mapDispatchToProps = (dispatch) => {
   return {
     getMovies: (title) => dispatch(getMovies(title)),
-    addMovieFavorite: (movie) => dispatch(addMovieFavorite(movie)),
+    // addMovieFavorite: (movie) => dispatch(addMovieFavorite(movie)),
   };
 };
 
