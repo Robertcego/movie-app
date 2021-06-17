@@ -1,7 +1,7 @@
 import React from 'react';
 import './MovieCard.component.css';
 
-function MovieCard({ title, poster, director, year, rated }) {
+function MovieCard({ title, poster, year }) {
   return (
     <div
       style={{

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
-import { addMovieFavorite, getMovies } from '../../actions';
+import { getMovies } from '../../actions';
 // import { Link } from 'react-router-dom';
 // import MovieCard from '../Movie/MovieCard';
 

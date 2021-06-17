@@ -3,9 +3,9 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import MovieCard from './MovieCard';
 import { addMovieFavorite } from '../../actions';
-import { BsFillStarFill } from 'react-icons/bs';
+import { BsFillStarFill, BsStar } from 'react-icons/bs';
 import './Movies.component.css';
-function Movies({ movies, addMovieFavorite }) {
+function Movies({ movies, addMovieFavorite, favorites }) {
   return (
     <div>
       <div
@@ -26,7 +26,7 @@ function Movies({ movies, addMovieFavorite }) {
                   year={movie.Year}
                 />
               </Link>
-              <button
+              <div
                 className="btn"
                 onClick={() =>
                   addMovieFavorite({
@@ -35,12 +35,10 @@ function Movies({ movies, addMovieFavorite }) {
                   })
                 }
               >
-                <BsFillStarFill
-                  size="2em"
-                  color="#ffe100"
-                  className="fav-icon"
-                />
-              </button>
+                {favorites && <BsFillStarFill /> && (
+                  <BsStar size="1.5em" color="#ffe100" className="fav-icon" />
+                )}
+              </div>
             </div>
           </div>
         ))}
@@ -52,6 +50,7 @@ function Movies({ movies, addMovieFavorite }) {
 const mapStateToProps = (state) => {
   return {
     movies: state.loadMovies,
+    favorites: state.favoriteMovies,
   };
 };
 
