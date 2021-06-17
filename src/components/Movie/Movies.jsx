@@ -3,7 +3,8 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import MovieCard from './MovieCard';
 import { addMovieFavorite } from '../../actions';
-
+import { BsFillStarFill } from 'react-icons/bs';
+import './Movies.component.css';
 function Movies({ movies, addMovieFavorite }) {
   return (
     <div>
@@ -17,13 +18,7 @@ function Movies({ movies, addMovieFavorite }) {
       >
         {movies.map((movie) => (
           <div key={movie.imdbID}>
-            <div
-              style={{
-                padding: '0.15rem',
-                display: 'flex',
-                flexDirection: 'column',
-              }}
-            >
+            <div className="container">
               <Link to={`/movie/${movie.imdbID}`}>
                 <MovieCard
                   title={movie.Title}
@@ -32,6 +27,7 @@ function Movies({ movies, addMovieFavorite }) {
                 />
               </Link>
               <button
+                className="btn"
                 onClick={() =>
                   addMovieFavorite({
                     title: movie.Title,
@@ -39,7 +35,11 @@ function Movies({ movies, addMovieFavorite }) {
                   })
                 }
               >
-                Add Favorite
+                <BsFillStarFill
+                  size="2em"
+                  color="#ffe100"
+                  className="fav-icon"
+                />
               </button>
             </div>
           </div>

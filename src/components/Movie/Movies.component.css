@@ -1,0 +1,20 @@
+.container {
+  padding: 0.15rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.btn {
+  background: none;
+  border: none;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  cursor: pointer;
+}
+
+/* .fav-icon {
+  color: #ffe100;
+  height: 3rem;
+} */

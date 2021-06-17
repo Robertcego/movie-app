@@ -8,7 +8,9 @@ export default function NavBar() {
     <header>
       <nav>
         <Search />
-        <NavLink exact to="/">Home</NavLink>
+        <NavLink exact to="/">
+          Home
+        </NavLink>
         <NavLink to="/favorites">Favorites</NavLink>
       </nav>
     </header>
