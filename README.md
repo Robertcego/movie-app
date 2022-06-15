@@ -3,4 +3,4 @@
 ### React with React Redux app consuming the [OMDb Api](https://www.omdbapi.com/)
 
 #### To do:
-###### Change the Redux old code to use Redux Toolkit 
+[ ] Change the Redux old code to use Redux Toolkit 
