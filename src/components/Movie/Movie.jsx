@@ -1,14 +1,18 @@
 import React, { useEffect } from 'react';
-import { connect, useSelector, useDispatch } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { getMovieDetail } from '../../actions/index';
 import { useParams } from 'react-router-dom';
 
-function Movie({ getMovieDetail, movieDetail }) {
+function Movie() {
   const { id } = useParams();
 
+  const dispatch = useDispatch();
+  const movieDetail = useSelector((state) => state.movieDetail);
   useEffect(() => {
-    getMovieDetail(id);
-  }, [getMovieDetail, id]);
+    return dispatch(getMovieDetail(id));
+  }, [id]);
+
+  console.log(movieDetail);
 
   return (
     <div>
@@ -31,6 +35,8 @@ function Movie({ getMovieDetail, movieDetail }) {
   );
 }
 
-const mapStateToProps = ({ movieDetail }) => ({ movieDetail });
+// const mapStateToProps = ({ movieDetail }) => ({ movieDetail });
 
-export default connect(mapStateToProps, { getMovieDetail })(Movie);
+// export default connect(mapStateToProps, { getMovieDetail })(Movie);
+
+export default Movie;

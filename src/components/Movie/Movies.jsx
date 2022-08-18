@@ -5,6 +5,7 @@ import MovieCard from './MovieCard';
 import { addMovieFavorite } from '../../actions';
 import { BsFillStarFill, BsStar } from 'react-icons/bs';
 import './Movies.component.css';
+
 function Movies({ movies, addMovieFavorite, favorites }) {
   return (
     <div>
@@ -18,7 +19,7 @@ function Movies({ movies, addMovieFavorite, favorites }) {
       >
         {movies.map((movie) => (
           <div key={movie.imdbID}>
-            <div className="container">
+            <div className='container'>
               <Link to={`/movie/${movie.imdbID}`}>
                 <MovieCard
                   title={movie.Title}
@@ -27,7 +28,7 @@ function Movies({ movies, addMovieFavorite, favorites }) {
                 />
               </Link>
               <div
-                className="btn"
+                className='btn'
                 onClick={() =>
                   addMovieFavorite({
                     title: movie.Title,
@@ -36,7 +37,7 @@ function Movies({ movies, addMovieFavorite, favorites }) {
                 }
               >
                 {favorites && <BsFillStarFill /> && (
-                  <BsStar size="1.5em" color="#ffe100" className="fav-icon" />
+                  <BsStar size='1.5em' color='#ffe100' className='fav-icon' />
                 )}
               </div>
             </div>
