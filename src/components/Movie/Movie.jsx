@@ -9,8 +9,8 @@ function Movie() {
   const dispatch = useDispatch();
   const movieDetail = useSelector((state) => state.movieDetail);
   useEffect(() => {
-    return dispatch(getMovieDetail(id));
-  }, [id]);
+    dispatch(getMovieDetail(id));
+  }, [dispatch, id]);
 
   console.log(movieDetail);
 

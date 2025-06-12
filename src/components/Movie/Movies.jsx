@@ -36,8 +36,18 @@ function Movies({ movies, addMovieFavorite, favorites }) {
                   })
                 }
               >
-                {favorites && <BsFillStarFill /> && (
-                  <BsStar size='1.5em' color='#ffe100' className='fav-icon' />
+                {favorites.some((fav) => fav.id === movie.imdbID) ? (
+                  <BsFillStarFill
+                    size='1.5em'
+                    color='#ffe100'
+                    className='fav-icon'
+                  />
+                ) : (
+                  <BsStar
+                    size='1.5em'
+                    color='#ffe100'
+                    className='fav-icon'
+                  />
                 )}
               </div>
             </div>
