@@ -15,9 +15,9 @@ function MovieCard({ title, poster, year }) {
         style={{
           width: '19rem',
           height: '27.8rem',
-          backgroundImage: `url(${poster}) `,
+          backgroundImage: `url(${poster})`,
           backgroundRepeat: 'no-repeat',
-          backgrounSize: 'center',
+          backgroundSize: 'cover',
           backgroundPosition: 'center center',
         }}
       >
@@ -25,7 +25,7 @@ function MovieCard({ title, poster, year }) {
           className="card-container"
           style={{
             height: '26.5rem',
-            background: 'linear-gradient(0deg, #00000099 60%, #ffffff11 100%',
+            background: 'linear-gradient(0deg, #00000099 60%, #ffffff11 100%)',
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'flex-start',
