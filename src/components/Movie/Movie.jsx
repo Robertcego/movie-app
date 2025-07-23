@@ -12,6 +12,17 @@ function Movie() {
     dispatch(getMovieDetail(id));
   }, [dispatch, id]);
 
+  useEffect(() => {
+    if (movieDetail && movieDetail.Title) {
+      document.title = movieDetail.Title + ' | Movie Details';
+    } else {
+      document.title = 'Loading... | Movie Details';
+    }
+    return () => {
+      document.title = 'Movie App';
+    };
+  }, [movieDetail]);
+
   console.log(movieDetail);
 
   return (
