@@ -35,7 +35,9 @@ function MovieCard({ title, poster, year }) {
         >
           <div>
             <h3>{title}</h3>
+
             <h4>{year}</h4>
+
           </div>
         </div>
       </div>
