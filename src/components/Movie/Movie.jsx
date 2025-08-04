@@ -27,7 +27,6 @@ function Movie() {
 
   return (
     <div>
-      <h2>testing out to see if I can revert changes made in an already created PR</h2>
       {movieDetail ? (
         <div>
           <h1>Title:</h1>
@@ -39,8 +38,6 @@ function Movie() {
           <p>{movieDetail.Runtime}</p>
           <p>{movieDetail.Director}</p>
           <p>{movieDetail.Plot}</p>
-          <p>{movieDetail.Actors}</p>
-          <p>{movieDetail.Genre}</p>
         </div>
       ) : (
         <p>Loading...</p>
