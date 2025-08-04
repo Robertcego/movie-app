@@ -7,53 +7,63 @@ import { BsFillStarFill, BsStar } from 'react-icons/bs';
 import './Movies.component.css';
 
 function Movies({ movies, addMovieFavorite, favorites }) {
+  console.log('Movies component - movies:', movies);
+  console.log('Movies component - favorites:', favorites);
   return (
     <div>
-      <div
-        style={{
-          display: 'flex',
-          flexWrap: 'wrap',
-          alignItems: 'center',
-          justifyContent: 'center',
-        }}
-      >
-        {movies.map((movie) => (
-          <div key={movie.imdbID}>
-            <div className='container'>
-              <Link to={`/movie/${movie.imdbID}`}>
-                <MovieCard
-                  title={movie.Title}
-                  poster={movie.Poster}
-                  year={movie.Year}
-                />
-              </Link>
-              <div
-                className='btn'
-                onClick={() =>
-                  addMovieFavorite({
-                    title: movie.Title,
-                    id: movie.imdbID,
-                  })
-                }
-              >
-                {favorites.some((fav) => fav.id === movie.imdbID) ? (
-                  <BsFillStarFill
-                    size='1.5em'
-                    color='#ffe100'
-                    className='fav-icon'
+      {movies && movies.length > 0 ? (
+        <div
+          style={{
+            display: 'flex',
+            flexWrap: 'wrap',
+            alignItems: 'center',
+            justifyContent: 'center',
+            marginTop: '1rem',
+            gap: '1rem',
+          }}
+        >
+          {movies.map((movie) => (
+            <div key={movie.imdbID}>
+              <div className='container'>
+                <Link to={`/movie/${movie.imdbID}`}>
+                  <MovieCard
+                    title={movie.Title}
+                    poster={movie.Poster}
+                    year={movie.Year}
                   />
-                ) : (
-                  <BsStar
-                    size='1.5em'
-                    color='#ffe100'
-                    className='fav-icon'
-                  />
-                )}
+                </Link>
+                <div
+                  className='btn'
+                  onClick={() =>
+                    addMovieFavorite({
+                      title: movie.Title,
+                      id: movie.imdbID,
+                    })
+                  }
+                >
+                  {favorites.some((fav) => fav.id === movie.imdbID) ? (
+                    <BsFillStarFill
+                      size='1.5em'
+                      color='#ffe100'
+                      className='fav-icon'
+                    />
+                  ) : (
+                    <BsStar
+                      size='1.5em'
+                      color='#ffe100'
+                      className='fav-icon'
+                    />
+                  )}
+                </div>
               </div>
             </div>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
+      ) : (
+        <div style={{ textAlign: 'center', marginTop: '2rem' }}>
+          <p>Search for movies to see results</p>
+        </div>
+      )}
     </div>
   );
 }

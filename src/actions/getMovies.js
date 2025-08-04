@@ -1,12 +1,14 @@
 import { GET_MOVIES } from '.';
-require('dotenv').config();
 
-// const apiKey = process.env.REACT_API_KEY;
+const apiKey = process.env.REACT_APP_API_KEY;
 
 export default function getMovies(title) {
   return async function (dispatch) {
-    const response = await fetch(`http://www.omdbapi.com/?apikey=d7d8e6f3&s=${title}`);
+    console.log('API Key:', apiKey);
+    console.log('Searching for:', title);
+    const response = await fetch(`http://www.omdbapi.com/?apikey=${apiKey}&s=${title}`);
     const json = await response.json();
+    console.log('API Response:', json);
     dispatch({
       type: GET_MOVIES,
       payload: json,
