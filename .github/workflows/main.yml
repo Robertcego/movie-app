@@ -47,3 +47,7 @@ jobs:
           commit-message: "chore: daily dependency update"
           title: 'Daily Dependency Update'
           body: 'Automated dependency update at 10 PM (UTC)'
+
+      - name: Auto Merge Dependency Updates
+        if: steps.git-check.outputs.changed == 'true'
+        uses: tjenkinson/gh-action-auto-merge-dependency-updates@v1.4.2
